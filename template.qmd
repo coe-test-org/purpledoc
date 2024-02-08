@@ -1,18 +1,9 @@
 ---
-title: "template"
-description: Protect your credentials, tokens, data and more
-date: September 1, 2023
-date-modified: today
-author: 
-  - Frank Aragona
-format: 
-  html:
-    theme: 
-      - cosmo
-      - assets/styles.scss
-    scss: assets/styles.scss
-    highlight-style: assets/custom.theme
-    title-block-banner: true
+title: Untitled
+format:
+  purpledoc-html: default
+author: DOH-FAA3303
+date: last-modified
 ---
 
 ## Quarto
@@ -51,5 +42,6 @@ You can add options to executable code like this
 ```
 
 The `echo: false` option disables the printing of code (only output is displayed).
+
 
 
