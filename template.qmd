@@ -1,8 +1,9 @@
 ---
-title: Untitled
+title: Purple Doc Quarto Template
+description: an example of the purple doc quarto style
 format:
   purpledoc-html: default
-author: DOH-FAA3303
+author: frankthetank
 date: last-modified
 ---
 
@@ -10,16 +11,16 @@ date: last-modified
 
 Quarto enables you to weave together content and executable code into a finished document. To learn more about Quarto see <https://quarto.org>.
 
-to put an image into the doc, do this
-`![](assets/image.ext)`
 
-examples:
-`![](assets/nwpage_tree_logo.png)`
+you can use a box shadow by calling the `myframe` css class like this, with the code wrapped in `:::{/myframe :::}`:
 
-![](assets/nwpage_tree_logo.png)
-
-
-you can use a box shadow by calling the `myframe` css class
+````markdown
+:::{.myframe}
+```{{r}}
+code here
+```
+:::
+````
 
 ::: myframe
 ```{r filename="script_in_repo.R"}
@@ -34,6 +35,37 @@ creds <- yaml::read_yaml("path/to/local_credentials.yml")
 server_name <- creds$default$conn_list_wdrs$server
 ```
 :::
+
+similarly, call `smallframe` for smaller code chunks
+
+:::{.smallframe}
+```{bash filename="zsh"}
+#| eval: false
+conda activate my_environment
+```
+:::
+
+## Custom Callout Blocks
+
+this template comes with custom callout blocks. 
+
+:::{.note}
+{{< fa unlock size="3x" >}} **Objectives**
+
+1.  Provide security guidelines
+2.  Set up security guardrails
+3.  Develop a process for reviewing code and pushing private code to a public repo
+:::
+
+## Adding Images
+
+this template comes with images. to put an image into the doc, do this
+`![](assets/image.ext)`
+
+examples:
+`![](assets/nwpage_tree_logo.png)`
+
+![](assets/nwpage_tree_logo.png)
 
 ## Running Code
 

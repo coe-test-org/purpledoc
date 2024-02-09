@@ -6,10 +6,11 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
-<meta name="author" content="DOH-FAA3303">
+<meta name="author" content="frankthetank">
 <meta name="dcterms.date" content="2024-02-08">
+<meta name="description" content="an example of the purple doc quarto style">
 
-<title>Untitled</title>
+<title>Purple Doc Quarto Template</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -78,8 +79,13 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <header id="title-block-header" class="quarto-title-block default page-columns page-full">
   <div class="quarto-title-banner page-columns page-full">
     <div class="quarto-title column-body">
-      <h1 class="title">Untitled</h1>
-                      </div>
+      <h1 class="title">Purple Doc Quarto Template</h1>
+                  <div>
+        <div class="description">
+          an example of the purple doc quarto style
+        </div>
+      </div>
+                </div>
   </div>
     
   
@@ -88,7 +94,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
       <div>
       <div class="quarto-title-meta-heading">Author</div>
       <div class="quarto-title-meta-contents">
-               <p>DOH-FAA3303 </p>
+               <p>frankthetank </p>
             </div>
     </div>
       
@@ -110,6 +116,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
    
   <ul>
   <li><a href="#quarto" id="toc-quarto" class="nav-link active" data-scroll-target="#quarto">Quarto</a></li>
+  <li><a href="#custom-callout-blocks" id="toc-custom-callout-blocks" class="nav-link" data-scroll-target="#custom-callout-blocks">Custom Callout Blocks</a></li>
+  <li><a href="#adding-images" id="toc-adding-images" class="nav-link" data-scroll-target="#adding-images">Adding Images</a></li>
   <li><a href="#running-code" id="toc-running-code" class="nav-link" data-scroll-target="#running-code">Running Code</a></li>
   </ul>
 </nav>
@@ -122,33 +130,64 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <section id="quarto" class="level2">
 <h2 class="anchored" data-anchor-id="quarto">Quarto</h2>
 <p>Quarto enables you to weave together content and executable code into a finished document. To learn more about Quarto see <a href="https://quarto.org" class="uri">https://quarto.org</a>.</p>
-<p>to put an image into the doc, do this <code>![](assets/image.ext)</code></p>
-<p>examples: <code>![](assets/nwpage_tree_logo.png)</code></p>
-<p><img src="assets/nwpage_tree_logo.png" class="img-fluid"></p>
-<p>you can use a box shadow by calling the <code>myframe</code> css class</p>
+<p>you can use a box shadow by calling the <code>myframe</code> css class like this, with the code wrapped in <code>:::{/myframe :::}</code>:</p>
+<div class="sourceCode" id="cb1"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>:::{.myframe}</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="in">code here</span></span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>:::</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="myframe">
 <div class="cell">
 <div class="code-with-filename">
 <div class="code-with-filename-file">
 <pre><strong>script_in_repo.R</strong></pre>
 </div>
-<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="co"># this script is in the repo, but credentials are hidden</span></span>
-<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(yaml)</span>
-<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="co"># read in the local credentials yaml file</span></span>
-<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>creds <span class="ot">&lt;-</span> yaml<span class="sc">::</span><span class="fu">read_yaml</span>(<span class="st">"path/to/local_credentials.yml"</span>)</span>
-<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a><span class="co"># pull in the credentials</span></span>
-<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a>server_name <span class="ot">&lt;-</span> creds<span class="sc">$</span>default<span class="sc">$</span>conn_list_wdrs<span class="sc">$</span>server</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="co"># this script is in the repo, but credentials are hidden</span></span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(yaml)</span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a><span class="co"># read in the local credentials yaml file</span></span>
+<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a>creds <span class="ot">&lt;-</span> yaml<span class="sc">::</span><span class="fu">read_yaml</span>(<span class="st">"path/to/local_credentials.yml"</span>)</span>
+<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a><span class="co"># pull in the credentials</span></span>
+<span id="cb2-8"><a href="#cb2-8" aria-hidden="true" tabindex="-1"></a>server_name <span class="ot">&lt;-</span> creds<span class="sc">$</span>default<span class="sc">$</span>conn_list_wdrs<span class="sc">$</span>server</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </div>
 </div>
+<p>similarly, call <code>smallframe</code> for smaller code chunks</p>
+<div class="smallframe">
+<div class="cell">
+<div class="code-with-filename">
+<div class="code-with-filename-file">
+<pre><strong>zsh</strong></pre>
+</div>
+<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="ex">conda</span> activate my_environment</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="custom-callout-blocks" class="level2">
+<h2 class="anchored" data-anchor-id="custom-callout-blocks">Custom Callout Blocks</h2>
+<p>this template comes with custom callout blocks.</p>
+<div class="note">
+<p> <strong>Objectives</strong></p>
+<ol type="1">
+<li>Provide security guidelines</li>
+<li>Set up security guardrails</li>
+<li>Develop a process for reviewing code and pushing private code to a public repo</li>
+</ol>
+</div>
+</section>
+<section id="adding-images" class="level2">
+<h2 class="anchored" data-anchor-id="adding-images">Adding Images</h2>
+<p>this template comes with images. to put an image into the doc, do this <code>![](assets/image.ext)</code></p>
+<p>examples: <code>![](assets/nwpage_tree_logo.png)</code></p>
+<p><img src="assets/nwpage_tree_logo.png" class="img-fluid"></p>
 </section>
 <section id="running-code" class="level2">
 <h2 class="anchored" data-anchor-id="running-code">Running Code</h2>
 <p>When you click the <strong>Render</strong> button a document will be generated that includes both content and the output of embedded code. You can embed code like this:</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="dv">1</span> <span class="sc">+</span> <span class="dv">1</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="dv">1</span> <span class="sc">+</span> <span class="dv">1</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>[1] 2</code></pre>
 </div>
