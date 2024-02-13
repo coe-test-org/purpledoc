@@ -6,7 +6,7 @@ contributes:
   formats:
     html:
       toc: true
-      theme: [cosmo, custom.scss, styles.css]
+      theme: [cosmo, custom.scss]
       highlight-style: custom.theme
       title-block-banner: true
 
