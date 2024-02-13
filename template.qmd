@@ -50,7 +50,7 @@ conda activate my_environment
 this template comes with custom callout blocks. 
 
 :::{.note}
-{{< fa unlock size="3x" >}} **Objectives**
+ **Objectives**
 
 1.  Provide security guidelines
 2.  Set up security guardrails
