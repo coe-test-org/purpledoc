@@ -14,7 +14,7 @@ contributes:
         background: light
       page-footer: |
         "Copyright 2022, Lexcorp, Inc." 
-    format: purpledoc-html
+    purpledoc-html: default
   formats:
     html:
       toc: true
