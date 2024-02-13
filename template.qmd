@@ -63,9 +63,9 @@ this template comes with images. to put an image into the doc, do this
 `![](assets/image.ext)`
 
 examples:
-`![](assets/nwpage_tree_logo.png)`
+`![](images/nwpage_tree_logo.png)`
 
-![](assets/nwpage_tree_logo.png)
+![](images/nwpage_tree_logo.png)
 
 ## Running Code
 

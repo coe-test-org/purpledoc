@@ -4,15 +4,3 @@
   border: 3px solid purple;
   font-weight: bold;
 }
-
-/*-- scss:rules --*/
-
-/* Add logo to title block margin */
-.quarto-title-block .quarto-title-banner {
-  background-image: url(assets/nwpage_tree_logo.png);
-  background-size: 140px;
-  background-position: left;
-  background-repeat: no-repeat;
-  padding-left: 3%;
-  background-origin: content-box;
-}
