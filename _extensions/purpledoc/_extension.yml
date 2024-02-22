@@ -9,13 +9,9 @@ contributes:
       theme: [cosmo, custom.scss]
       highlight-style: custom.theme
       title-block-banner: true
+      # add the images folder to the extension
       format-resources:
-        - images/doh_logo_black.PNG
-        - images/DOH_logo_primary.jpg
-        - images/doh_logo.PNG
-        - images/nwpage_logo.png
-        - images/nwpage_logo2.png
-        - images/nwpage_tree_logo.png
+        - images
 
 
 
