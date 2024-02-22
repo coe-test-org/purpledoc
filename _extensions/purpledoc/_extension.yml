@@ -9,5 +9,8 @@ contributes:
       theme: [cosmo, custom.scss]
       highlight-style: custom.theme
       title-block-banner: true
+      format-resources:
+        - nwpage_tree_logo.png
+        - DOH_logo_primary.jpg
 
 
